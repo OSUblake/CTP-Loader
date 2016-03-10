@@ -6,6 +6,7 @@
     "angular-material": "^1.0.6",
     "jquery": "^2.2.1",
     "angular-ui-router": "^0.2.18",
-    "pixi.js": "^3.0.10"
+    "pixi.js": "^3.0.10",
+    "lodash": "^4.6.1"
   }
 }
