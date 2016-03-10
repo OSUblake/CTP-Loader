@@ -1,0 +1,11 @@
+{
+  "name": "ctp-loader",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-material": "^1.0.6",
+    "jquery": "^2.2.1",
+    "angular-ui-router": "^0.2.18",
+    "pixi.js": "^3.0.10"
+  }
+}

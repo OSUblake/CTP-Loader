@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{9EE02705-33C6-490D-A6FD-2DC32E59326A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\jspm.config.js" />
+    <Content Include="src\scripts\greensock\easing\EasePack.js" />
+    <Content Include="src\scripts\greensock\jquery.gsap.js" />
+    <Content Include="src\scripts\greensock\plugins\AttrPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\BezierPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\ColorPropsPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\CSSPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\CSSRulePlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\DirectionalRotationPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\DrawSVGPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\EaselPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\EndArrayPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\KineticPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\MorphSVGPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\Physics2DPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\PhysicsPropsPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\RaphaelPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\RoundPropsPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\ScrambleTextPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\ScrollToPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\TEMPLATE_Plugin.js" />
+    <Content Include="src\scripts\greensock\plugins\TextPlugin.js" />
+    <Content Include="src\scripts\greensock\plugins\ThrowPropsPlugin.js" />
+    <Content Include="src\scripts\greensock\TimelineLite.js" />
+    <Content Include="src\scripts\greensock\TimelineMax.js" />
+    <Content Include="src\scripts\greensock\TweenLite.js" />
+    <Content Include="src\scripts\greensock\TweenMax.js" />
+    <Content Include="src\scripts\greensock\utils\CSSTransform.min.js" />
+    <Content Include="src\scripts\greensock\utils\Draggable.js" />
+    <Content Include="src\scripts\greensock\utils\SplitText.js" />
+    <Content Include="src\scripts\jbinary\jbinary.js" />
+    <Content Include="src\scripts\jdataview\jdataview.js" />
+    <Content Include="src\styles\main.css" />
+    <Content Include="src\test.js" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="gulpfile.ts" />
+    <TypeScriptCompile Include="src\app\app.bootstrap.ts" />
+    <TypeScriptCompile Include="src\app\app.interfaces.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\core\core.module.ts" />
+    <TypeScriptCompile Include="src\app\core\router.ts" />
+    <TypeScriptCompile Include="src\app\layout\layout.module.ts" />
+    <TypeScriptCompile Include="src\app\layout\shell.controller.ts" />
+    <TypeScriptCompile Include="src\app\loader\dst-parser.ts" />
+    <TypeScriptCompile Include="src\app\loader\loader.module.ts" />
+    <TypeScriptCompile Include="src\app\loader\patch-loader.ts" />
+    <TypeScriptCompile Include="src\app\loader\pattern.ts" />
+    <TypeScriptCompile Include="src\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="src\tsconfig.json" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="src\patches\A06inch.DST" />
+    <Content Include="src\patches\B.DST" />
+    <Content Include="src\patches\football border.DST" />
+    <Content Include="src\patches\football.DST" />
+    <Content Include="src\patches\FULL PATCH COMPLETE 5-27-09.DST" />
+    <Content Include="src\patches\GONZAGA.DST" />
+    <Content Include="src\patches\leprechaun 5in.DST" />
+    <Content Include="src\patches\O 5 INCH.DST" />
+    <Content Include="src\patches\ohio 4in.DST" />
+    <Content Include="src\patches\ohio state border.DST" />
+    <Content Include="tsd.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\lib\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CTP_Loader</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62389</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62389/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

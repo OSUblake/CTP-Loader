@@ -1,0 +1,54 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "orchestrator/orchestrator.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "node/node.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "q/Q.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "gulp/gulp.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "chokidar/chokidar.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "parse-glob/parse-glob.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "micromatch/micromatch.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "browser-sync/browser-sync.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "greensock/greensock.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "angular-material/angular-material.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "angular-ui-router/angular-ui-router.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "lodash/lodash.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    },
+    "pixi.js/pixi.js.d.ts": {
+      "commit": "8b3b453a104bb2a949580bbb4e8c81c2a10138b3"
+    }
+  }
+}

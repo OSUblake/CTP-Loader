@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Team Patches</title>
+    <meta charset="utf-8"/>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="lib/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <!-- VENDOR -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/lodash/dist/lodash.js"></script>
+    <script src="lib/pixi.js/bin/pixi.js"></script>
+
+    <!-- GSAP -->
+    <script src="scripts/greensock/TweenMax.js"></script>
+    <script src="scripts/greensock/utils/CSSTransform.min.js"></script>
+    <script src="scripts/greensock/utils/Draggable.js"></script>
+    <script src="scripts/greensock/plugins/MorphSVGPlugin.js"></script>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/jbinary/jbinary.js"></script>
+    <script src="scripts/jdataview/jdataview.js"></script>
+
+    <!-- ANGULAR -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <script src="lib/angular-messages/angular-messages.js"></script>
+    <script src="lib/angular-material/angular-material.js"></script>
+    
+    <!-- ANGULAR MODULES -->
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+
+</head>
+<body>
+    
+    <main ng-controller="ShellController as vm">
+        
+        <canvas id="mycanvas3"></canvas>
+        <canvas id="mycanvas4"></canvas>
+
+    </main>
+
+
+    <!-- APP -->
+    <script src="app/app.module.js"></script>
+
+    <!-- CORE -->
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/router.js"></script>
+
+    <!-- LAYOUT -->
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/shell.controller.js"></script>
+
+    <!-- LOADER -->
+    <script src="app/loader/loader.module.js"></script>
+    <script src="app/loader/pattern.js"></script>
+    <script src="app/loader/dst-parser.js"></script>
+    <script src="app/loader/patch-loader.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="app/app.bootstrap.js"></script>
+
+</body>
+</html>

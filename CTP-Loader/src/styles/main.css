@@ -1,0 +1,23 @@
+﻿body {
+	/*background-color: red;*/
+	/*color: #006400;*/
+}
+
+.test-canvas,
+#mycanvas,
+#mycanvas2,
+#mycanvas3,
+#mycanvas4 {
+	border: 1px solid black;
+}
+
+.upload-box {
+	border: 4px dashed black;
+	width: 200px;
+	height: 100px;
+	margin: 15px;
+}
+
+.upload-box.dragover {
+	border-color: red;
+}
