@@ -22,7 +22,10 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="src\app\routes\control-panel\patch-editor\patch-design.html" />
+    <Content Include="src\app\routes\control-panel\patch-editor\patch-layer.html" />
     <Content Include="src\favicon.ico" />
+    <Content Include="src\geom-modules.js" />
     <Content Include="src\index.html" />
     <Content Include="src\jspm.config.js" />
     <Content Include="src\scripts\greensock\easing\EasePack.js" />
@@ -59,6 +62,7 @@
     <Content Include="src\styles\main.css" />
     <Content Include="src\test.js" />
     <Content Include="web.config" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="gulpfile.ts" />
@@ -67,12 +71,26 @@
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\core\core.module.ts" />
     <TypeScriptCompile Include="src\app\core\router.ts" />
+    <TypeScriptCompile Include="src\app\geom\find-corners.ts" />
+    <TypeScriptCompile Include="src\app\geom\geom.module.ts" />
+    <TypeScriptCompile Include="src\app\geom\point.ts" />
+    <TypeScriptCompile Include="src\app\geom\simplify-polyline.ts" />
+    <TypeScriptCompile Include="src\app\geom\simplify.ts" />
     <TypeScriptCompile Include="src\app\layout\layout.module.ts" />
     <TypeScriptCompile Include="src\app\layout\shell.controller.ts" />
     <TypeScriptCompile Include="src\app\loader\dst-parser.ts" />
     <TypeScriptCompile Include="src\app\loader\loader.module.ts" />
     <TypeScriptCompile Include="src\app\loader\patch-loader.ts" />
+    <TypeScriptCompile Include="src\app\loader\patch.ts" />
     <TypeScriptCompile Include="src\app\loader\pattern.ts" />
+    <TypeScriptCompile Include="src\app\ng-decorators.ts" />
+    <TypeScriptCompile Include="src\app\routes\control-panel\control-panel.module.ts" />
+    <TypeScriptCompile Include="src\app\routes\control-panel\patch-editor\patch-design.ts" />
+    <TypeScriptCompile Include="src\app\routes\control-panel\patch-editor\patch-layer.ts" />
+    <TypeScriptCompile Include="src\app\routes\control-panel\patch-editor\patch-settings.ts" />
+    <TypeScriptCompile Include="src\app\routes\routes.module.ts" />
+    <TypeScriptCompile Include="src\app\utils\linked-list.ts" />
+    <TypeScriptCompile Include="src\app\utils\utils.module.ts" />
     <TypeScriptCompile Include="src\tsd.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
@@ -101,6 +119,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="src\app\routes\admin\patch-editor\" />
+    <Folder Include="src\app\routes\layout-app\account\" />
+    <Folder Include="src\app\routes\layout-app\home\" />
+    <Folder Include="src\app\routes\layout-app\manage\" />
+    <Folder Include="src\app\routes\layout-auth\" />
+    <Folder Include="src\app\routes\layout-error\" />
+    <Folder Include="src\app\routes\shared\" />
+    <Folder Include="src\app\routes\shell\" />
     <Folder Include="src\lib\" />
   </ItemGroup>
   <PropertyGroup>

@@ -21,9 +21,12 @@
     }
 
     export class Pattern {
+
         currentColorIndex: number = 0;
+
         colors: Array<Color> = [];
         stitches: Array<Stitch> = [];
+
         _stitches: Array<Stitch[]> = [];
         //////
 
@@ -36,7 +39,8 @@
         lastX: number  = 0;
         lastY: number  = 0;
 
-        constructor() { }
+        // TEST
+        constructor(public patch: Patch) { }
 
         addColorRgb(r: number, g: number, b: number, description: string) {
             this.colors[this.colors.length] = new Color(r, g, b, description);
@@ -61,7 +65,17 @@
                 this.currentColorIndex += 1;
                 this.layers.push([]);
                 this._stitches.push([]);
+
+                // TEST
+                this.patch.addLayer();
             }
+
+            // TEST
+            //if (!this.patch.layers.length) {
+            if (!this.patch.currentLayer) {
+                this.patch.addLayer();
+            }
+
 
             if (!this.layers.length) {
                 this.layers.push([]);
@@ -70,6 +84,10 @@
             if (!this._stitches.length) {
                 this._stitches.push([]);
             }
+
+
+            // TEST
+            this.patch.currentLayer.addStitch(new Stitch(x, y, flags, this.currentColorIndex));
 
             _.last(this.layers).push(x, y);
             _.last(this._stitches).push(new Stitch(x, y, flags, this.currentColorIndex));
@@ -126,6 +144,14 @@
                 this.stitches[i].y -= this.top;
             }
 
+            // TEST
+            _.forEach(this.patch.layers, layer => {
+                _.forEach(layer.stitches, stitch => {
+                    stitch.x -= this.left;
+                    stitch.y -= this.top;
+                });
+            });
+
             _.forEach(this._stitches, layer => {
                 _.forEach(layer, stitch => {
                     stitch.x -= this.left;
@@ -150,6 +176,9 @@
 
         invertPatternVertical() {
 
+            //console.log("INIVERT PATCH\n", this.patch.layers);
+            //console.log("INIVERT _STITCHES\n", this._stitches);
+
             const temp = -this.top;
             const stitchCount = this.stitches.length;
 
@@ -157,6 +186,14 @@
                 this.stitches[i].y = -this.stitches[i].y;
             }
 
+            // TEST
+            _.forEach(this.patch.layers, layer => {
+                _.forEach(layer.stitches, stitch => {
+                    //stitch.y *= -1;
+                    stitch.y = -stitch.y;
+                });
+            });
+            
             _.forEach(this._stitches, layer => {
                 _.forEach(layer, stitch => {
                     stitch.y *= -1;
@@ -172,6 +209,8 @@
 
             this.top = -this.bottom;
             this.bottom = temp;
+
+            
         }
 
         addColorRandom() {
@@ -229,17 +268,17 @@
         }
     }
 
-    function createPattern(dstRead: dstRead) {
-        return (buffer: ArrayBuffer, canvas: HTMLCanvasElement) => {
+    //function createPattern(dstRead: dstRead) {
+    //    return (buffer: ArrayBuffer, canvas: HTMLCanvasElement) => {
 
-            var view = new jDataView(buffer, 0);
-            var pattern = new Pattern();
+    //        var view = new jDataView(buffer, 0);
+    //        var pattern = new Pattern();
 
-            dstRead(view, pattern);
-            pattern.moveToPositive();
-            pattern.drawShape(canvas);
+    //        dstRead(view, pattern);
+    //        pattern.moveToPositive();
+    //        pattern.drawShape(canvas);
 
-            return pattern;
-        }
-    }
+    //        return pattern;
+    //    }
+    //}
 }

@@ -1,0 +1,19 @@
+﻿<div>
+    Patch Layer
+    <hr />
+
+    <div>
+        <div ng-repeat="shape in $ctrl.shapes">
+            <!--{{$index}}: {{shape.id}} - {{shape.points.length}}-->
+
+            <button ng-click="$ctrl.editShape(shape)">{{shape.id}} - {{shape.points.length}}</button>
+
+            <!--<div>
+                {{shape.path}}
+            </div>-->
+
+        </div>
+    </div>
+
+    <canvas class="patch-layer-canvas"></canvas>
+</div>

@@ -14,3 +14,7 @@
 /// <reference path="angular-ui-router/angular-ui-router.d.ts" />
 /// <reference path="lodash/lodash.d.ts" />
 /// <reference path="pixi.js/pixi.js.d.ts" />
+/// <reference path="browserify/browserify.d.ts" />
+/// <reference path="js-clipper/js-clipper.d.ts" />
+/// <reference path="poly2tri/poly2tri.d.ts" />
+/// <reference path="easystarjs/easystarjs.d.ts" />

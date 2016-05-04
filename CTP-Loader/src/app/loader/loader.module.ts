@@ -19,15 +19,25 @@
 
     function seedSamples($http: IHttpService, patchLoader: PatchLoader) {
 
+        // TEST
+        var patch;
+
         $http({
             method: "GET",
             url: patches[6],
             responseType: "arraybuffer"
         }).then(
-            response => patchLoader.createPatch(new Blob([response.data])),
+            response => {
+                patchLoader.createPatch(new Blob([response.data]))
+                    .then(response => {
+                        patch = response;
+                        console.log("PATCH LOADED\n", patch);
+                    })
+            },
+            //response => patchLoader.createPatch(new Blob([response.data])),
             response => console.error("Load patch", response.data || "Request failed"));
             //response => logger.error("Load patch", response.data || "Request failed"));
     }
 
-    module.run(seedSamples);
+    //module.run(seedSamples);
 }

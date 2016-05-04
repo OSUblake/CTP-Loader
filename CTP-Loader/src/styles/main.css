@@ -21,3 +21,36 @@
 .upload-box.dragover {
 	border-color: red;
 }
+
+patch-layer {
+	border: 1px solid red;
+	display: block;
+}
+
+.patch-layer-canvas {
+	border: 1px solid green;
+}
+
+.editor-side-bar {
+	border: 1px solid black;
+	position: fixed;
+	overflow: auto;
+	width: 300px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: #ddd;
+}
+
+.editor-side-bar-fixed {
+	border: 1px solid blue;
+	/*position: fixed;*/
+}
+
+.editor-content {
+	position: relative;
+}
+
+.view-container {
+	padding-left: 310px;
+}

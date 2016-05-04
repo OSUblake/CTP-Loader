@@ -1,7 +1,7 @@
 ﻿import gulp = require("gulp");
 
-//import browserSync = require("browser-sync");
-var browserSync = require("browser-sync");
+import browserSync = require("browser-sync");
+//var browserSync = require("browser-sync");
 
 var reload = browserSync.reload;
 
@@ -25,7 +25,8 @@ gulp.task("serve", () => {
             }
         },
         startPath: "index.html",
-        reloadOnRestart: true
+        reloadOnRestart: true,
+        tunnel: "gnomesayin"
     });
 });
 

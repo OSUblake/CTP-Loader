@@ -5,3 +5,6 @@
 /// <reference path="../typings/angular-material/angular-material.d.ts" />
 /// <reference path="../typings/lodash/lodash.d.ts" />
 /// <reference path="../typings/pixi.js/pixi.js.d.ts" />
+/// <reference path="../typings/js-clipper/js-clipper.d.ts" />
+/// <reference path="../typings/poly2tri/poly2tri.d.ts" />
+/// <reference path="../typings/easystarjs/easystarjs.d.ts" />

@@ -7,30 +7,67 @@
         patches = [];
 
         constructor(
+            private $q: IQService,
             private $http: IHttpService,
             //private logger: ILogger,
             private dstRead: dstRead) {
         }
 
-        createPatch(file) {
+        createPatch(file): IPromise<Patch> {
+
+            // TEST
+            var deferred = this.$q.defer();
+            //var patch = new Patch();
 
             var canvas = document.querySelector("#mycanvas3") as HTMLCanvasElement;
             var reader = new FileReader();
 
             reader.onloadend = (event: FileReaderEvent) => {
 
+                // TEST
+                var patch = new Patch();
+
                 var view = new jDataView(event.target.result, 0);
-                var pattern = new Pattern();
+                //var pattern = new Pattern();
+                var pattern = new Pattern(patch);
 
                 this.dstRead(view, pattern);
 
                 pattern.moveToPositive();
                 pattern.drawShape(canvas);
 
-                this.render(pattern);
+                // TEST NO RENDER
+                //this.render(pattern);
+
+                // TEST
+                patch.width = pattern.right;
+                patch.height = pattern.bottom;
+
+                //_.forEach(patch.layers, layer => layer.createPoints());
+                //_.forEach(patch.layers, layer => layer.createShapes());
+                _.forEach(patch.layers, layer => layer.init());
+
+                //_.forEach(patch.layers, layer => {
+                //    layer.createPoints();
+                //    layer.createShapes();
+                //    layer.createPSLG();
+                //});
+
+
+                // TEST!
+                //_.forEach(patch.layers, (layer, i) => {
+                //    layer._stitches = pattern._stitches[i];
+                //});
+
+                // TEST
+                deferred.resolve(patch);
             }
 
             reader.readAsArrayBuffer(file);
+
+            // TEST
+            return deferred.promise;
+
         }
 
         render(pattern: Pattern) {

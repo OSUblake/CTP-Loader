@@ -6,8 +6,8 @@
 
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link href="lib/angular-material/angular-material.css" rel="stylesheet" />
-    <link href="styles/main.css" rel="stylesheet" />
+    <link href="lib/angular-material/angular-material.css" rel="stylesheet"/>
+    <link href="styles/main.css" rel="stylesheet"/>
 
     <!-- VENDOR -->
     <script src="lib/jquery/dist/jquery.js"></script>
@@ -23,6 +23,13 @@
     <!-- SCRIPTS -->
     <script src="scripts/jbinary/jbinary.js"></script>
     <script src="scripts/jdataview/jdataview.js"></script>
+    <script src="geom-bundles.js"></script>
+    <script src="lib/evispa-timo-jsclipper/clipper.js"></script>
+    <script src="lib/PolyK/src/polyk.js"></script>
+    <script src="lib/sylvester/sylvester.js"></script>
+    <script src="lib/poly2tri/dist/poly2tri.js"></script>
+    <script src="lib/pathfinding/pathfinding-browser.js"></script>
+    <script src="lib/easystarjs/bin/easystar-0.2.3.js"></script>
 
     <!-- ANGULAR -->
     <script src="lib/angular/angular.js"></script>
@@ -30,20 +37,21 @@
     <script src="lib/angular-aria/angular-aria.js"></script>
     <script src="lib/angular-messages/angular-messages.js"></script>
     <script src="lib/angular-material/angular-material.js"></script>
-    
+
     <!-- ANGULAR MODULES -->
     <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
 
 </head>
-<body>
-    
-    <main ng-controller="ShellController as vm">
-        
-        <canvas id="mycanvas3"></canvas>
-        <canvas id="mycanvas4"></canvas>
 
-    </main>
+<body ng-cloak>
 
+
+    <div class="view-container" layout="column" flex>
+        <a href="" ui-sref="design">Design</a>
+        <a href="" ui-sref="settings">Settings</a>
+
+        <ui-view layout="column" flex></ui-view>
+    </div>
 
     <!-- APP -->
     <script src="app/app.module.js"></script>
@@ -52,6 +60,13 @@
     <script src="app/core/core.module.js"></script>
     <script src="app/core/router.js"></script>
 
+    <!-- GEOM -->
+    <script src="app/geom/geom.module.js"></script>
+    <script src="app/geom/point.js"></script>
+    <script src="app/geom/simplify.js"></script>
+    <script src="app/geom/find-corners.js"></script>
+    <script src="app/geom/simplify-polyline.js"></script>
+    
     <!-- LAYOUT -->
     <script src="app/layout/layout.module.js"></script>
     <script src="app/layout/shell.controller.js"></script>
@@ -61,6 +76,20 @@
     <script src="app/loader/pattern.js"></script>
     <script src="app/loader/dst-parser.js"></script>
     <script src="app/loader/patch-loader.js"></script>
+    <script src="app/loader/patch.js"></script>
+
+    <!-- ROUTES -->
+    <script src="app/routes/routes.module.js"></script>
+
+    <!-- ROUTES - CONTROL PANEL -->
+    <script src="app/routes/control-panel/control-panel.module.js"></script>
+    <script src="app/routes/control-panel/patch-editor/patch-design.js"></script>
+    <script src="app/routes/control-panel/patch-editor/patch-settings.js"></script>
+    <script src="app/routes/control-panel/patch-editor/patch-layer.js"></script>
+
+    <!-- UTILS -->
+    <script src="app/utils/utils.module.js"></script>
+    <script src="app/utils/linked-list.js"></script>
 
     <!-- BOOTSTRAP -->
     <script src="app/app.bootstrap.js"></script>

@@ -1,0 +1,44 @@
+﻿
+
+<!--<div layout="row">-->
+
+    <section class="editor-side-bar">
+
+
+        <div class="editor-side-bar-fixed">
+            Edit stuff
+        </div>
+
+        <div ng-if="$ctrl.currentShape">
+            Points: {{$ctrl.currentShape.points.length}} <br/>
+            Simplified: {{$ctrl.currentShape.simplifiedPoints.length}} <br/>
+
+            <div>
+                <button ng-click="$ctrl.updateLayer()">Update</button>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="editor-content">
+        Patch Design
+
+        <div>
+            <md-button class="md-raised md-primary" ng-click="$ctrl.loadPatch()">Load</md-button>
+        </div>
+        <hr />
+        <canvas id="mycanvas3"></canvas>
+
+        <patch-layer ng-repeat="layer in $ctrl.patch.layers"
+                     layer="layer"
+                     patch-width="{{$ctrl.patch.width}}"
+                     patch-height="{{$ctrl.patch.height}}">
+
+        </patch-layer>
+    </section>
+
+    
+
+<!--</div>-->
